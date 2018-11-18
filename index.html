@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+table {
+margin-top: 40px;
+}
+h3 {
+
+margin-left: 20px;
+}
+
+form {
+float: left;
+margin-top: 20px;
+}
+</style>
+<script type="text/javascript">
+function remove() {
+	 var obj = event.srcElement;
+	 var li  = obj.parentNode.parentNode;
+	 var table = document.getElementById("table");
+	 var tbody = table.lastChild;
+	 tbody.removeChild(li); 
+}
+var num = 4;
+function mouseout(){
+	var obj = event.srcElement;
+	obj.bgColor="#EFEFEF";
+}
+function onmouse(){
+	var obj = event.srcElement;
+	obj.bgColor="red";
+}
+function click1() {
+
+x = document.createElement("tr");
+y1 = document.createElement("th");
+y2 = document.createElement("th");
+y3 = document.createElement("th");
+y4 = document.createElement("th");
+fa = document.getElementById("table");
+fa.lastChild.appendChild(x)
+x.appendChild(y1);
+x.appendChild(y2);
+x.appendChild(y3);
+x.appendChild(y4);
+y1.innerHTML = num;
+num = num + 1;
+y2.innerHTML = document.myform.xingming.value;
+y3.innerHTML = document.myform.sex.value;
+aa=document.createElement("a");
+y4.appendChild(aa);
+aa.href="javascript:void(0);";
+aa.innerHTML="删除";
+aa.onclick = remove();
+y2.onmouseover = onmouse()
+y2.mouseout = mouseout();
+}
+</script>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body style="margin-top: 40px;margin-right: auto;">
+
+<form name="myform">
+	姓名 ：
+<input type="text" name="xingming" />
+性别 : 
+<input type="radio" name="sex" value="男"  />男<input type="radio" name="sex" value="女" />女
+</form>
+<button type="button" onclick="click1()" style="width: 100px;height: 35px;margin-left: 30px;margin-top: 13px;float: left;">
+增加按钮<button>
+<table border="1px" cellspacing="0px" cellpadding="55" id="table" background="#EFEFEF">
+<tr>
+<th>编号</th>
+<th >姓名</th>
+<th>性别</th>
+<th>操作</th>
+</tr>
+<tr>
+<th>1</th>
+<th onmouseover="onmouse()" onmouseout="mouseout()">张三</th>
+<th>女</th>
+<th><a href="javascript:void(0);" onclick="remove()">删除</a></th>
+</tr>
+<tr>
+<th>2</th>
+<th onmouseover="onmouse()" onmouseout="mouseout()">李四</th>
+<th>女</th>
+<th><a href="javascript:void(0);" onclick="remove()">删除</a></th>
+</tr>
+<tr>
+<th>3</th>
+<th onmouseover="onmouse()" onmouseout="mouseout()">王五</th>
+<th>男</th>
+<th><a href="javascript:void(0);" onclick="remove()">删除</a></th>
+</tr>
+</table>
+</body>
+<html>
