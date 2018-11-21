@@ -49,11 +49,7 @@ y1.innerHTML = num;
 num = num + 1;
 y2.innerHTML = document.myform.xingming.value;
 y3.innerHTML = document.myform.sex.value;
-aa=document.createElement("a");
-y4.appendChild(aa);
-aa.href="javascript:void(0);";
-aa.innerHTML="删除";
-aa.onclick = "remove()";
+y4.innerHTML = "<a href='javascript:void(0);' onclick='remove()'>删除</a>";
 y2.onmouseover = "onmouse()";
 y2.mouseout = "mouseout()";
 }
