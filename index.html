@@ -37,6 +37,8 @@ function click1() {
 x = document.createElement("tr");
 y1 = document.createElement("th");
 y2 = document.createElement("th");
+y2.addEventListener("mouseover",function(){y2.bgColor="red";});
+y2.addEventListener("mouseout",function(){y2.bgColor="#EFEFEF";});
 y3 = document.createElement("th");
 y4 = document.createElement("th");
 fa = document.getElementById("table");
@@ -50,8 +52,6 @@ num = num + 1;
 y2.innerHTML = document.myform.xingming.value;
 y3.innerHTML = document.myform.sex.value;
 y4.innerHTML = "<a href='javascript:void(0);' onclick='remove()'>删除</a>";
-y2.onmouseover = "onmouse()";
-y2.mouseout = "mouseout()";
 }
 </script>
 <meta charset="utf-8">
