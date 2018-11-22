@@ -37,8 +37,8 @@ function click1() {
 x = document.createElement("tr");
 y1 = document.createElement("th");
 y2 = document.createElement("th");
-y2.addEventListener("mouseover",function(){y2.bgColor="red";});
-y2.addEventListener("mouseout",function(){y2.bgColor="#EFEFEF";});
+y2.addEventListener("mouseover",function(){this.bgColor="red";});
+y2.addEventListener("mouseout",function(){this.bgColor="#EFEFEF";});
 y3 = document.createElement("th");
 y4 = document.createElement("th");
 fa = document.getElementById("table");
